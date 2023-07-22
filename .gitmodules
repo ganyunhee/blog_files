@@ -1,0 +1,4 @@
+[submodule "blog_site/public"]
+	path = blog_site/public
+	url = https://github.com/ganyunhee/ganyunhee.github.io.git
+	branch = main
