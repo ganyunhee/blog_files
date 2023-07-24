@@ -31,7 +31,7 @@ pygmentsUseClasses = true
   textColor = "#FCFCFC"
   dotColor = "#F6BE00"
   enableGoogleFonts = true 
-  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Fira+Mono&family=Poppins:wght@400;700&display=swap"
   fontFamilyHeading = "Poppins"
   fontFamilyParagraph = "Helvetica"
   fontFamilyMonospace = "monospace"
