@@ -6,7 +6,7 @@ tags:
     - others
 ---
 
-A blog post for documenting the installation of Hugo on Windows 11 and setting up a Hugo theme for GitHub Pages.
+A blog post for documenting the installation of Hugo on Windows 11 and setting up a Hugo theme for GitHub Pages."
 
 ref. https://www.youtube.com/watch?v=psyz4UPnGAA . https://gohugo.io/getting-started/quick-start/ .
 
@@ -294,3 +294,14 @@ rm -r -fo 'dir_path'
 ```
 Remove-Item -Recurse -Force 'dir_path'
 ```
+
+
+## Other Refs
+
+For Github Pages
+- https://pages.github.com/
+- https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-2/
+
+For GitHub Pages + Hugo
+- https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
+- https://velog.io/@mellonggo/Github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Hugo
