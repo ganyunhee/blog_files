@@ -418,7 +418,7 @@ undefined하고 null은 둘 다 정의된 값이 없음을 나타낸다.
 - null은 아예 값이 없음을 나타내요 
   (변수가 값을 가지고 있지 않음, empty 또는 "no value"랑 비슷함)
 
-<참고>[https://2ssue.github.io/common_questions_for_Web_Developer/docs/Javascript/13_undefined&null.html](https://2ssue.github.io/common_questions_for_Web_Developer/docs/Javascript/13_undefined&null.html) 
+<참고> <br>[https://2ssue.github.io/common_questions_for_Web_Developer/docs/Javascript/13_undefined&null.html](https://2ssue.github.io/common_questions_for_Web_Developer/docs/Javascript/13_undefined&null.html) 
 [https://helloworldjavascript.net/pages/160-null-undefined.html](https://helloworldjavascript.net/pages/160-null-undefined.html)  
 [https://www.scaler.com/topics/javascript/null-and-undefined-in-javascript/](https://www.scaler.com/topics/javascript/null-and-undefined-in-javascript/)
 
@@ -435,9 +435,10 @@ undefined하고 null은 둘 다 정의된 값이 없음을 나타낸다.
 - `Sleep ...`
 
 #### INSPIRATION
-- https://mrkool.tistory.com/51
-- https://wooder2050.medium.com/%EB%B0%94%EB%8B%90%EB%9D%BC%EC%BD%94%EB%94%A9-prep-course-11%EC%9D%BC%EC%B0%A8-4ab608a6a67d
-- https://www.youtube.com/watch?v=TO6qC0nlwZs
+- Javascript 오목 게임 만들기. https://mrkool.tistory.com/51
+- 3x3 오목게임 (HTML, CSS, JS). https://wooder2050.medium.com/%EB%B0%94%EB%8B%90%EB%9D%BC%EC%BD%94%EB%94%A9-prep-course-11%EC%9D%BC%EC%B0%A8-4ab608a6a67d
+- 자바스크립트 오목게임. https://www.youtube.com/watch?v=TO6qC0nlwZs
+- Vue로 오목게임 만들기. https://kabkee.github.io/vue-cli/omok-game/
 
 #### SOURCE CODE
 
