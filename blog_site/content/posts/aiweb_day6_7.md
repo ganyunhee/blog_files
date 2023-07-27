@@ -62,12 +62,12 @@ https://nodejs.org/api/readline.html
 
 ```ts
 const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
+	input: process.stdin,
+	output: process.stdout
 });
 
 readline.question("Write something here: ", (answer) => {
-    console.log('Your input is \'' + answer + '\'')
+	console.log('Your input is \'' + answer + '\'')
 });
 
 // OUTPUT
@@ -122,7 +122,7 @@ Initialize 30x30 board and fill with '-'.
 for (let i=0; i < 30; i++) {
 	const row: string[] = [];
 	// traverse columns
-	for (let j=0; j < 30; j++) {    
+	for (let j=0; j < 30; j++) {
 		row.push('-');
 	}
 	board.push(row);
@@ -133,9 +133,9 @@ Create function that prints out board as output
 
 ```ts
 function output(board: string[][]) {
-    for (const row of board) {
-        console.log(row.join(' '));
-    }
+	for (const row of board) {
+		console.log(row.join(' '));
+	}
 }
 output(board);
 ```
@@ -154,20 +154,20 @@ More info on `String split()` - https://www.tutorialspoint.com/typescript/typesc
 ```ts
 // import readline module
 const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
+	input: process.stdin,
+	output: process.stdout
 });
 ```
 
 ```ts
 // receive user input
 readline.question("Input row and column (format: x y) ", (input) => {
-    // split input to row, column
-    var splitted = input.split(" ", 2);
-    // type cast string to number
-    row = parseInt(splitted[0]);
-    col = parseInt(splitted[1]);
-    console.log("Your input is (" + row + ", " + col + ")");
+	// split input to row, column
+	var splitted = input.split(" ", 2);
+	// type cast string to number
+	row = parseInt(splitted[0]);
+	col = parseInt(splitted[1]);
+	console.log("Your input is (" + row + ", " + col + ")");
 });
 ```
 <br>
@@ -195,19 +195,19 @@ I created an `async` function for getting player input.
 
 ```ts
 async function getPlayerInput(player: number) {
-    // import readline module
-    const rl = require('readline').createInterface ({
-        input: process.stdin,
-        output: process.stdout
-    });
+	// import readline module
+	const rl = require('readline').createInterface ({
+		input: process.stdin,
+		output: process.stdout
+	});
 
-    // read and return user input
-    return new Promise<string>((resolve) => {
-        rl.question(`Player ${player}'s turn (row col): `, (response) => {
-            rl.close();
-            resolve(response);
-        });
-    });
+	// read and return user input
+	return new Promise<string>((resolve) => {
+		rl.question(`Player ${player}'s turn (row col): `, (response) => {
+			rl.close();
+			resolve(response);
+		});
+	});
 }
 ```
 
@@ -222,12 +222,12 @@ More info on `Promise`
 But basically, I implemented a return process wherein I call the `resolve` function in `Promise` and it checks for user response / input. All of this lead to this portion of the code:
 
 ```ts
-    return new Promise<string>((resolve) => {
-        rl.question(`Player ${player}'s turn (row col): `, (response) => {
-            rl.close();
-            resolve(response);
-        });
-    });
+return new Promise<string>((resolve) => {
+	rl.question(`Player ${player}'s turn (row col): `, (response) => {
+		rl.close();
+		resolve(response);
+	});
+});
 ```
 
 #### Updating the board
@@ -239,11 +239,11 @@ I made a separate function to apply user input and update the board. I replaced 
 
 ```ts
 function update(row: number, col: number, player: number) {
-    if(board[row][col] === '-') {
-        board[row][col] = player === 1 ? 'B' : 'W';
-        return true;
-    }
-    return false;
+	if(board[row][col] === '-') {
+		board[row][col] = player === 1 ? 'B' : 'W';
+		return true;
+	}
+	return false;
 }
 ```
 
@@ -270,106 +270,107 @@ Whenever there are five consecutive matching symbols, the function will return `
 For checking the rows, I implemented a for loop to traverse each element in each row. I used counters to count how many consecutive pieces there were (B or W).
 
 ```ts
-    // check rows
-    for (let i = 0; i < 30; i++) {
-        let countB = 0;
-        let countW = 0;
-        for (let j = 0; j < 30; j++) {
-            if (board[i][j] === 'B') {
-                countB++;
-                countW = 0;
-            } else if (board[i][j] === 'W') {
-                countW++;
-                countB = 0;
-            } else {
-                countB = 0;
-                countW = 0;
-            }
-             if (countB === 5 || countW === 5) {
-                return true;
-            }
-        }
-    }
+// check rows
+for (let i = 0; i < 30; i++) {
+	let countB = 0;
+	let countW = 0;
+	for (let j = 0; j < 30; j++) {
+		if (board[i][j] === 'B') {
+			countB++;
+			countW = 0;
+		} else if (board[i][j] === 'W') {
+			countW++;
+			countB = 0;
+		} else {
+			countB = 0;
+			countW = 0;
+		}
+		if (countB === 5 || countW === 5) {
+			return true;
+		}
+	}
+}
 ```
 
 For checking the columns, I used a for loop to traverse each element in the same y axis (since elements on the same columns have the same y coordinates).
 
 ```ts
-    // check columns
-    for (let j = 0; j < 30; j++) {
-            let countB = 0;
-            let countW = 0;
-            for (let i = 0; i < 30; i++) {
-            if (board[i][j] === 'B') {
-                countB++;
-                countW = 0;
-            } else if (board[i][j] === 'W') {
-                countW++;
-                countB = 0;
-            } else {
-                countB = 0;
-                countW = 0;
-            }
+// check columns
+for (let j = 0; j < 30; j++) {
+	let countB = 0;
+	let countW = 0;
+	for (let i = 0; i < 30; i++) {
+		if (board[i][j] === 'B') {
+			countB++;
+			countW = 0;
+		} else if (board[i][j] === 'W') {
+			countW++;
+			countB = 0;
+		} else {
+			countB = 0;
+			countW = 0;
+		}
 
-            if (countB === 5 || countW === 5) {
-                return true;
-            }
-        }
-    }
+		if (countB === 5 || countW === 5) {
+			return true;
+		}
+	}
+}
 ```
 
 Diagonals are always a bit tricky. But I looked at my old C code for building a Tetris game. So while reminiscing the old days and after doing a few tests and some trial and error,  I managed to make the following function. The logic is a merge of traversing both the rows and columns while counting the consecutive matching pieces via an additional index k.
 
 ```ts
-    // check diagonals
-    for (let i = 0; i < 30; i++) {
-        for (let j = 0; j < 30; j++) {
-            // check diagonals
-            // start from (i, j) going right and down
-            let countB = 0;
-            let countW = 0;
-            for (let k = 0; k < 5; k++) {
-                if (i + k < 30 && j + k < 30) {
-                    if (board[i + k][j + k] === 'B') {
-                        countB++;
-                        countW = 0;
-                    } else if (board[i + k][j + k] === 'W') {
-                        countW++;
-                        countB = 0;
-                    } else {
-                        countB = 0;
-                        countW = 0;
-                    }
+// check diagonals
+for (let i = 0; i < 30; i++) {
+    for (let j = 0; j < 30; j++) {
+        // check diagonals
+        // start from (i, j) going right and down
+        let countB = 0;
+        let countW = 0;
+        for (let k = 0; k < 5; k++) {
+            if (i + k < 30 && j + k < 30) {
+                if (board[i + k][j + k] === 'B') {
+                    countB++;
+                    countW = 0;
+                } else if (board[i + k][j + k] === 'W') {
+                    countW++;
+                    countB = 0;
+                } else {
+                    countB = 0;
+                    countW = 0;
+                }
 
-                    if (countB === 5 || countW === 5) {
-                        return true;
-                    }
-                }
-            }
+                if (countB === 5 || countW === 5) {
+                    return true;
+                }
+            }
+        }
 
-            // Check diagonals starting from position (i, j) going right and up
-            countB = 0;
-            countW = 0;
-                for (let k = 0; k < 5; k++) {
-                    if (i - k >= 0 && j + k < 30) {
-                        if (board[i - k][j + k] === 'B') {
-                            countB++;
-                            countW = 0;
-                        } else if (board[i - k][j + k] === 'W') {
-                            countW++;
-                            countB = 0;
-                        } else {
-                            countB = 0;
-                            countW = 0;
-                        }
+        // Check diagonals starting from position (i, j) going right and up
+        countB = 0;
+        countW = 0;
+        for (let k = 0; k < 5; k++) {
+            if (i - k >= 0 && j + k < 30) {
+                if (board[i - k][j + k] === 'B') {
+                    countB++;
+                    countW = 0;
+                } else if (board[i - k][j + k] === 'W') {
+                    countW++;
+                    countB = 0;
+                } else {
+                    countB = 0;
+                    countW = 0;
+                }
 
-                        if (countB === 5 || countW === 5) {
-                            return true;
-                        }
-                    }
-                }
-            }
-    }
+                if (countB === 5 || countW === 5) {
+                    return true;
+                }
+            }
+        }
+    }
+}
+
 ```
 
 
@@ -426,10 +427,11 @@ undefined하고 null은 둘 다 정의된 값이 없음을 나타낸다.
 ## CONCLUSION
 
 #### TODO
-- `<과제 I>
-	`- Add timer and implement condition #6`
+- `<과제 I>` <br>
+	`- Add timer and implement condition #6` <br>
 	`- HTML and CSS visual UI implementation (Maybe)`
-- `<과제 II> Create JS file to test null and undefined values`
+- `<과제 II>` <br>
+	`-Create JS file to test null and undefined values`
 - `Sleep ...`
 
 #### INSPIRATION
