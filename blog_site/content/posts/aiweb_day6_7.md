@@ -379,7 +379,7 @@ Diagonals are always a bit tricky. But I looked at my old C code for building a 
 Simple `Game Over` message
 
 ```ts
-console.log(`GAME OVER. Player ${currentPlayer === 1 ? '1' : '1'} wins!`);
+console.log(`GAME OVER. Player ${currentPlayer === 1 ? '1' : '2'} wins!`);
 ```
 
 BEST CASE. 
