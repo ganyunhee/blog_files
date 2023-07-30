@@ -51,15 +51,15 @@ CSS styling involved removing default text decoration settings from `<a>` tag re
 
 <br>
 
-#### Add paginization
+#### Add pagination
 ----
 
-I figured paginizattion would be needed in order to traverse between blog posts. The following shows a simple implementation of paginization.
+I figured paginizattion would be needed in order to traverse between blog posts. The following shows a simple implementation of pagination.
 
-For the next and previous arrows, insert '<' and '>' as text within `<span>` tags. Insert page numbers (starting from 1) as elements in an unordered list. Add links to all paginization elements via `<a>` tag.
+For the next and previous arrows, insert '<' and '>' as text within `<span>` tags. Insert page numbers (starting from 1) as elements in an unordered list. Add links to all pagination elements via `<a>` tag.
 
 ```html
-<div class="paginization">
+<div class="pagination">
 	<span><a href=""><</a></span>
 	<ul>
 		<li><a href="">1</a></li>
@@ -72,7 +72,7 @@ For the next and previous arrows, insert '<' and '>' as text within `<span>` tag
 CSS styling involved positioning -the elements to the center of the page as well as removing default decoration settings from list items and `<a>` tag referral links (color is set to white for default and visited links).
 
 ```css
-.paginization {
+.pagination {
 	margin-top: 5%;
 	display: flex;
 	align-items: center;
@@ -81,32 +81,32 @@ CSS styling involved positioning -the elements to the center of the page as well
 	font-size: 20px;
 }
 
-.paginization a {
+.pagination a {
 	text-decoration: none;
 }
 
-.paginization ul {
+.pagination ul {
 	padding-left: 50px;
 	padding-right: 50px;
 }
 
-.paginization ul li {
+.pagination ul li {
 	padding: 10px;
 } 
 
-.paginization a:visited {
+.pagination a:visited {
 	color: var(--white);
 }
 ```
 
-Also, text-underlining hover effects were added to both blog post links and paginization menu for better visual aid.
+Also, text-underlining hover effects were added to both blog post links and pagination menu for better visual aid.
 
 ```css
 .blog_posts li:hover {
 	text-decoration: underline;
 }
 
-.paginization a:hover {
+.pagination a:hover {
 	text-decoration: underline;
 }
 ```
@@ -114,7 +114,7 @@ Also, text-underlining hover effects were added to both blog post links and pagi
 <br>
 
 TO ADD.
-- JavaScript code that will add links (indicated by the apge number) onto the paginization menu when more blog posts are added. 
+- JavaScript code that will add links (indicated by the apge number) onto the pagination menu when more blog posts are added. 
 - JavaScript code reads a markdown(.md) file and generates an html file accordingly (or other methods of creating a blog post via markdown and adding it to the blog)
 - Blog post traversal via links
 
