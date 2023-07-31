@@ -394,9 +394,9 @@ Flask는 파이썬 기반의 프레임워크인데 SQL 데이터베이스를 쉽
 # 과제
 
 1. 숫자끼리 비교하는 연산과 문자끼리 비교하는 연산 중 왜 문자끼리 비교하는 연산이 상대적으로 불리한지 이유에 대해서 정리해보고 샘플 코드를 구현해서 제출하기
-	> TODO
+	> source. https://github.com/ganyunhee/ai_webdev/tree/main/python/compare_num_char
 2. 파이썬으로 일부 중복되는 element를 저장하고 최소 element가 10개이상 되는 배열을 만든다. 그리고 set() 구문 없이 오로지 for in 문으로 배열의 중복된 값을 없애는 코드를 작성하기
-	> TODO
+	> source. https://github.com/ganyunhee/ai_webdev/tree/main/python/repeating_char
 3. 자기 컴퓨터에 mysql 데이터베이스 설치하기 + HeidiSQL 또는 Dbeaver 프로그램을 설치한 후 mysql을 localhost로 호스팅되는 것 까지 세팅하기
 	> HeidiSQL 설치 [DONE] <br>
 		![](/posts/posts_images/aiweb_day11/heidisql.png)
