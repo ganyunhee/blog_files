@@ -1,7 +1,7 @@
 ---
 title: "[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 5"
 date: 2023-07-22
-descripton: "Day 1 in AI+웹개발 취업캠프"
+descripton: "Day 5 in AI+웹개발 취업캠프"
 tags:
     - diary
 ---
