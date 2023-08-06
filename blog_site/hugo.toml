@@ -33,7 +33,7 @@ pygmentsUseClasses = true
   enableGoogleFonts = true 
   googleFontsUrl = "https://fonts.googleapis.com/css2?family=Fira+Mono&family=Poppins:wght@400;700&display=swap"
   fontFamilyHeading = "Poppins"
-  fontFamilyParagraph = "Poppins"
+  fontFamilyParagraph = "'Helvetica', 'Noto Sans KR Light'"
   fontFamilyMonospace = "'Fira Mono', 'Noto Sans KR'"
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
