@@ -35,6 +35,7 @@ pygmentsUseClasses = true
   fontFamilyHeading = "Poppins"
   fontFamilyParagraph = "'Helvetica', 'Noto Sans KR Light'"
   fontFamilyMonospace = "'Fira Mono', 'Noto Sans KR'"
+  enableMathNotations = true
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [markup]
