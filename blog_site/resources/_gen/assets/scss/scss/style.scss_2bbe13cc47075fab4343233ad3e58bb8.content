@@ -1,7 +1,7 @@
 :root {
   --font-family-heading: Poppins;
-  --font-family-paragraph: Helvetica;
-  --font-family-monospace: monospace;
+  --font-family-paragraph: Poppins;
+  --font-family-monospace: 'Fira Mono', 'Noto Sans KR';
   --base-color: #1A1A1A;
   --base-offset-color: #eaeaea;
   --highlight-color: #268f77;
@@ -217,8 +217,8 @@ ul {
   .content code,
   .content pre {
     font-family: var(--font-family-monospace);
-    color: #FCFCFC;
-    background-color: #303531; }
+    color: #2F2F2F;
+    background-color: #F1F1EF; }
   .content .highlight pre {
     border-radius: 3px;
     font-size: 14px;

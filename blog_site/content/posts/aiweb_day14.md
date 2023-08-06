@@ -27,6 +27,7 @@ Foreign Key를 알아야 데이터베이스 생각하면서 코딩할 수 있다
 단, 실무에서 DB 수정할 것이 많을 수 있으니 Foreign Key를 잘 사용하지 않을 수 있다.
 
 <br>
+
 ## DB REVIEW
 ---
 <br>
