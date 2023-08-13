@@ -11,9 +11,10 @@ tags:
 <br>
 
 - [학습 목표](#학습-목표)
-- [주요한 JavaScript 스킬 리뷰](#주요한-JavaScript-스킬-리뷰)
+- [주요한 JavaScript 스킬 리뷰](#주요한-javascript-스킬-리뷰)
 - [CRA 미니 프로젝트 과정 : 할일 목록 만들기](#cra-미니-프로젝트-과정--할일-목록-만들기)
 - [CRA 미니 프로젝트 결과 : 할일 목록 만들기](#cra-미니-프로젝트-결과--할일-목록-만들기)
+- [TO IMPROVE](#to-improve)
 - [REFERENCES](#references)
 
 <br><br><br>
@@ -45,27 +46,92 @@ import Sample from './Sample'
 <!--리뷰에 대해서 자세히 작성할지 고민-->
 <!--중요한 기능 짧게 설명-->
 
+간단하게 배열을 다루는 방법, JSX syntax 또는 변수 표현하는 방법, map과 filter를 사용하는 방법, `useEffect`, `useState` 이 두 가지의 React hook를 활용하는 방식 등을 다시 복습했습니다.
 
 <br><br><br>
+
 
 ## CRA 미니 프로젝트 과정 : 할일 목록 만들기
 ---
 <br>
 
 <!--함수, 로직 설명-->
+### 할일 목록의 기능 : CRUD로 설명
 
+TODO 목록을 관리하기 위해 생성(Create), 읽어들이기(Read), 업데이트(Update), 삭제(Delete) 기능들이 필요합니다.
+즉, TODO 목록 프로그램이 기본적으로 가져야 할 기능들은 TODO 생성, 데이터를 가져오기, 데이터를 저장하고 업데이트, 그리고 TODO를 삭제하는 기능입니다.
 
-### 영구저장
+### 데이터 영구저장
 <br>
 
-앱을 만들때 영구저장을 언제 할지 timing이 중요하다고 배웠습니다. 즉, 데이터를 언제 저장할지, 또한 저장된 데이터를 언제 불러올지 생각해야 합니다.
+웹 데이터는 휘발성 데이터이므로 웹페이지를 새로고침할 때마다 데이터가 날라가는 상황이 발생됩니다.
+TODO 목록 프로그램의 경우에는 웹페이지를 새로고침해도 데이터가 저장되고 잘 불러오는 것이어야 합니다.
+따라서, 이번 프로젝트에서도 React를 통해 영구저장을 하는 방식을 실습해봤습니다.
 
-<!--언제 저장될지, 저장된 데이터 언제 불러올지 글 작성-->
-
+단, 영구저장을 언제 할지 timing이 중요하다고 배웠습니다. 즉, 데이터를 언제 저장할지, 또한 저장된 데이터를 언제 불러올지 생각해야 합니다.
 데이터의 영구 저장을 위해 웹앱을 접속하는 각 유저의 local storage에다 데이터를 저장하고 업데이트하면 됩니다.
 
-useEffect 사용
+이 프로젝트에서 데이터를 영구적으로 저장하기 위해 React의 hook인 `useEffect`를 사용합니다.
+
+#### React Hook : Effect Hook (useEffect) 사용
 <!--useEffect 왜 사용하는지 작성-->
+
+useEffect는 local storage에다 데이터를 저장하기 위해 사용하는 React hook입니다.
+
+useEffect를 통해 두가지를 해봤습니다.
+
+1. component가 만들어지는 순간마다 local storge 읽어들입니다.
+
+```jsx
+  useEffect(() => {
+    const defaultTodo = JSON.parse(localStorage.getItem("todo"));
+
+    if(!defaultTodo) return;
+
+    setTodo(defaultTodo)
+
+    if(defaultTodo.length !== 0) {
+      setTodo (
+        defaultTodo[defaultTodo.length - 1].todoId + 1
+      )
+    }
+  }, [])
+```
+
+2. TODO가 갱신될 때마다 local storage에 데이터를 저장했습니다.
+
+```jsx
+  useEffect(() => {
+    localStorage.setItem("todo", JSON.stringify(todo))
+  }, [todo])
+
+  return (
+    <Container>
+    <Form onSubmit={(e) => {
+      e.preventDefault()
+      handleSubmit(e.target.todo.value)
+      e.target.todo.value = ""
+    }}>
+      <TextInput type="text" placeholder='할일 쓰기' name="todo" />
+      <SubmitInput type="submit" value="추가" />
+    </Form>
+    <UnorderedList>
+      {todo.map((item, index) => (
+        <ListItem key={index}>
+            <TodoText onClick={() => {
+              alert(item.todoDone)
+              handleToggle(item.todoId)
+            }} style={ item.todoDone ? {textDecoration: 'line-through'} : {} }>{item.todoText}</TodoText>
+            <TodoDelete onClick={() => {
+              handleDelete(item.todoId)
+            }}>X</TodoDelete>
+          </ListItem>
+      ))}
+    </UnorderedList>
+    </Container>
+  );
+}
+```
 
 <br><br><br>
 
@@ -273,12 +339,19 @@ Glassmorphism 효과를 내기 위해 배경의 투명도를 조절하고 blur�
 
 background: white or black (35% opacity)
 background blur: 15px
-border: 1.5px white;
-shadow: 5px offset at x, 5px offset at y, 10px blur, 1px spread
+border: 1.5px white (25% opacity);
+shadow: 0px offset at x, 0px offset at y, 10px blur, 1px spread (black, 25% opacity)
 
 <!--Show styledComponents code-->
 
-<!--Add background image code form App.css-->
+```css
+  background-color: rgba(0, 0, 0, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+```
+
+그 다음, 배경 사진을 아래와 같이 웹페이지에 직접 첨부했습니다.
 
 ```css
 html{
@@ -351,11 +424,13 @@ module.exports = {
 
 #### Tailwind를 통해 추가 또는 변경한 것들
 - '추가' 버튼 대신에 Heroicon 아이콘 라이브러리에 포함된 arrow-right 아이콘을 사용했다
+- Tailwind에서 주워진 accent 스타일을 적용한 checkbox을 만들었다
 
+### 추가 기능 및 다른 이슈
 
-### 추가 기능
+1. Empty TODO -- 할일 목록에 빈칸을 넣는 것을 예방하도록 `handleSubmit` 함수 안에서 조건문을 추가
 
-1. Empty TODO -- 할일 목록에 빈칸을 넣는 것을 예방하도록 `handleSubmit` 함수 안에서 조건문을 추가했다
+입력 상자에 내용이 없거나 공백만 넣은 상태로 버튼을 누르면 alert 메세지가 나타나게 만들었습니다.
 
 ```jsx
 if(todoText.trim() === '') {
@@ -364,12 +439,118 @@ if(todoText.trim() === '') {
 }
 ```
 2. SubmitInput을 button으로 변경
-3. Heroicon을 submit 버튼 중간에 포지션을 잡기 위해
+3. Heroicon을 submit 버튼 중간에 포지션을 잡기 위한 과정
   - Heroicon svg를 submit 버튼 범위 안에 넣었다
   - 텍스트 입력 상자와 submit 버튼을 `TextInputWrapper`안에 모아서 wrapping을 했다
     - `TextInputWrapper` -- `display: flex; align-items: center;`
     - `SubmitInput` -- `display: flex; align-items: center; justify-items: center`
+4. '/'를 누르면 입력 상자를 자동으로 선택 또는 focus하기
 
+이 기능을 추가하기 위해 `useRef`를 사용했습니다.
+
+```jsx
+// Import to document
+import React, { useState, useEffect, useRef } from 'react';
+```
+
+```jsx
+// Add constant for key input reference
+const inputRef = useRef(null);
+```
+
+```jsx
+// Trigger focus upon key press
+useEffect(() => {
+  const handleKeyPress = (event) => {
+    if (event.key === '/') {
+      event.preventDefault();
+      inputRef.current.focus();
+    }
+  };
+
+  document.addEventListener('keydown', handleKeyPress);
+
+  return () => {
+    document.removeEventListener('keydown', handleKeyPress);
+  };
+}, []);
+```
+
+```jsx
+<TextInput
+  type='text'
+  placeholder='Create TODO  . . .'
+  name='todo'
+  ref={inputRef} // Attach reference to text input box element
+/>
+```
+
+5. CheckBox 기능 추가
+
+체크박스를 누르면 todo를 완료 표시하는 기능을 추가했습니다.
+
+- Checkbox를 클릭할 경우 : 체크박스가 checked인 상태가 되고 TodoText도 line-through 데코레이션이 적용된다
+- TODO 텍스트 클릭할 경우 : TodoText에 line-through 데코레이션이 적용되고 체크박스도 checked인 상태로 변경된다
+
+
+```jsx
+// useState를 사용
+const [checkedItems, setCheckedItems] = useState({});
+```
+
+```jsx
+// handleSubmit 코드 수정
+  const handleSubmit = (todoText) => {
+
+    //...
+
+    setTodo([
+      //...
+    ])
+    setCheckedItems((prevCheckedItems) => ({
+      ...prevCheckedItems,
+      [todoId]: false
+    }));
+    
+    //setTodoId(todoId + 1) ...
+  }
+```
+
+```jsx
+// handleToggle 코드 수정
+  const handleToggle = (todoId) => {
+
+    //...
+
+    setCheckedItems((prevCheckedItems) => ({
+      ...prevCheckedItems,
+      [todoId]: !prevCheckedItems[todoId]
+    }));
+  }
+```
+
+```jsx
+// checkbox toggle handler 함수 추가
+  const handleCheckboxToggle = (todoId) => {
+    setTodo((prevTodo) =>
+      prevTodo.map((item) =>
+        item.todoId === todoId
+          ? { ...item, todoDone: !item.todoDone }
+          : item
+      )
+    );
+    setCheckedItems((prevCheckedItems) => ({
+      ...prevCheckedItems,
+      [todoId]: !prevCheckedItems[todoId]
+    }));
+  };
+```
+
+```jsx
+// checkbox 요소에 id reference 추가하고
+// state를 확인하기 위해 onChange() 함수 사용
+<input type="checkbox" id={`checkbox-${item.todoId}`} className="accent-slate-600/25 w-4 h-4 ml-0 mr-5 px-0 hover:accent-slate-400" checked={checkedItems[item.todoId]} onChange={() => handleCheckboxToggle(item.todoId)} />
+```
 
 <br><br><br>
 
@@ -426,6 +607,16 @@ Sites는 자기 파일들을 업로드하여 배포하는 공간입니다. GitHu
 
 <br><br><br>
 
+### NOTE. React App 수정서항
+
+웹사이트를 수정할 때마다 build 폴더를 다시 만들어 Netlify에 배포한 웹앱을 업데이트하기 위해 build 폴더를 다시 업로드합니다.
+
+업로드하는 방식은 배포할 때와 똑같습니다. Netlify 홈페이지에서 Deploys > Sites 안에서 다시 드래그하여 웹 앱을 업데이트할 수 있습니다.
+
+![](/posts/posts_images/aiweb_day19/netlify_reupload.png)
+
+<br><br><br>
+
 
 ## CRA 미니 프로젝트 결과 : 할일 목록 만들기
 ---
@@ -441,11 +632,25 @@ https://github.com/ganyunhee/ai_webdev/tree/main/react/0810_react_todoapp/todo-a
 
 <br><br><br>
 
+## TO IMPROVE
+---
+<br>
+
+- TODO 내용을 편집할 수 있는 기능을 추가할 것
+- 각 TODO entry를 따로 표시하는 것보다 하나의 container 안에 모든 TODO를 모으는 형식을 해볼 것
+  - TODO가 추가될 때마다 container가 늘린다, List 형식처럼
+- React Hook 복습하고 계속 실습할 것
+
+<br><br><br>
 
 ## REFERENCES
 ---
 <br>
 
+- Using the Effect Hook.
+https://legacy.reactjs.org/docs/hooks-effect.html
+- Built-in React Hooks.
+https://react.dev/reference/react
 - Create React App: Deployment.
 https://create-react-app.dev/docs/deployment/
 - Install Tailwind CSS with Create React App.
@@ -454,6 +659,10 @@ https://tailwindcss.com/docs/guides/create-react-app
 https://tailwindcss.com/docs/configuration
 - Tailwind Heroicons
 https://heroicons.com/
+- Glassmorphism의 모든 것.
+https://ldrerin.tistory.com/479
+- How to implement glassmorphism with CSS.
+https://blog.logrocket.com/implement-glassmorphism-css/
 
 <br><br><br><br>
 
