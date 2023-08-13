@@ -420,6 +420,8 @@ Animate.css라는 pre-made 애니메이션 컴포넌츠 라이브러리를 사�
 
 ![](/posts/posts_images/aiweb_day17/myapp_output.png)
 
+<img src="/posts/posts_images/aiweb_day17/myapp_output.gif" style="width: 1000px;">
+
 SOURCE. https://github.com/ganyunhee/ai_webdev/tree/main/react/0808_react_myapp
 
 <br><br><br>

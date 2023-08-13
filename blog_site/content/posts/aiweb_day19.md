@@ -622,6 +622,13 @@ Sites는 자기 파일들을 업로드하여 배포하는 공간입니다. GitHu
 ---
 <br>
 
+### OUTPUT
+
+![](/posts/posts_images/aiweb_day19/output.png)
+
+<img src="/posts/posts_images/aiweb_day19/todoapp_output.gif">
+
+
 ### Netlify 링크
 
 https://nipa-frontend-todo-4-eunice.netlify.app/
