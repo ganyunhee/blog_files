@@ -628,7 +628,11 @@ https://nipa-frontend-todo-4-eunice.netlify.app/
 
 ### SOURCE
 
+(Initial)
 https://github.com/ganyunhee/ai_webdev/tree/main/react/0810_react_todoapp/todo-app
+
+(Custom)
+https://github.com/ganyunhee/react_todoapp_custom
 
 <br><br><br>
 
