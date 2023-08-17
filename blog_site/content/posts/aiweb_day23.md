@@ -13,6 +13,7 @@ tags:
 - [학습 목표](#학습-목표)
 - [Card App 만들기 과정](#card-app-만들기-과정)
 - [Card App 커스터마이징](#card-app-커스터마이징)
+- [OUTPUT](#output)
 - [TO IMPROVE](#to-improve)
 - [REFERENCES](#references)
 
@@ -634,6 +635,18 @@ Added flexbox code to center four cards per line.
 ### Netlify 링크
 
 https://nipa-frontend-card-app-4-eunice.netlify.app/
+
+<br><br><br>
+
+## TO IMPROVE
+---
+<br>
+
+- 텍스트와 레이아웃을 예쁘게 꾸미고 정리할 것
+    - 각 카드의 상세 페이지 내용: 캐릭터 이름을 큰 타이틀로 설정, 그 다음 캐릭터 설명을 추가할 것
+- 상세 페이지에 들어갈 때 각 캐릭터의 theme 음악을 재생할 것
+    - e.g. Miguel : Miguel Theme, Miles : Sunflower, Gwen : Drum Solo (Across the Spiderverse Intro), Peter : My Name.. is Peter B. Parker
+    - Sound ON/OFF 기능 버튼 넣을 것
 
 <br><br><br>
 
