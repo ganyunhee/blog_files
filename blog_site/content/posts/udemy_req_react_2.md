@@ -17,10 +17,6 @@ tags:
 
 ## ...
 
- 작성 중... 혼내지마세요...
-
-<iframe src="https://giphy.com/embed/3o7bufrhglm1BTsfra" width="480" height="427" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>
-
 
 <br><br><br>
 
