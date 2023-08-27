@@ -1,24 +1,14 @@
 ---
-title: "[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Udemy - React [PART II]"
-date: 2023-08-20
-descripton: "A journal on the 한입 크기로 잘라 먹는 리액트(React.js) Udemy Class. This entry is for Week 5 (PART II)."
+title: "[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Udemy - AI [PART I]"
+date: 2023-08-27
+descripton: "A journal on the AICE Basic 자격대비반 Udemy Class. This entry is for Week 6 (Part I)."
 tags:
     - diary
 ---
 
-<br><br>
+## AI Basics
 
----
-# CONTENTS SUMMARY
-- [TO BE UPDATED](#...)
----
-
-<br><br><br>
-
-## ...
-
-
-<br><br><br>
+To update ...
 
 <br><br><br><br>
 
