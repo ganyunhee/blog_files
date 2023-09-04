@@ -1,5 +1,5 @@
 ---
-title: "[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 25 to 29"
+title: "[AI웹개발 취업캠프/정보통신산업진흥원(NIPA)] Day 34"
 date: 2023-09-01
 descripton: "Day 25-29 in AI+웹개발 취업캠프"
 tags:
