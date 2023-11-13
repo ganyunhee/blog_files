@@ -3,7 +3,7 @@ title: "Test"
 date: 2023-MM-DD
 descripton: "Test"
 tags:
-    - other
+    - others
 ---
 
 # CONTENTS SUMMARY

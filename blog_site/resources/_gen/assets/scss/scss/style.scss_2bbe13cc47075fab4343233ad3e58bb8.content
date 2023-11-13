@@ -2,12 +2,12 @@
   --font-family-heading: Poppins;
   --font-family-paragraph: 'Helvetica', 'Noto Sans KR Light';
   --font-family-monospace: 'Fira Mono', 'Noto Sans KR';
-  --base-color: #1A1A1A;
+  --base-color: #F6F5F0;
   --base-offset-color: #eaeaea;
-  --highlight-color: #268f77;
-  --heading-color: #eaeaea;
-  --text-color: #FCFCFC;
-  --dot-color: #F6BE00; }
+  --highlight-color: #1B2021;
+  --heading-color: #242424;
+  --text-color: #1B2021;
+  --dot-color: #A8A9AD; }
 
 body, html {
   margin: 0;
