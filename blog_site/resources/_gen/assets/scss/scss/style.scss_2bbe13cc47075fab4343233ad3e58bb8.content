@@ -1,6 +1,6 @@
 :root {
-  --font-family-heading: Poppins;
-  --font-family-paragraph: 'Helvetica', 'Noto Sans KR Light';
+  --font-family-heading: Bebas Neue;
+  --font-family-paragraph: 'Inter Tight', 'Noto Sans KR Medium';
   --font-family-monospace: 'Fira Mono', 'Noto Sans KR';
   --base-color: #F6F5F0;
   --base-offset-color: #eaeaea;
