@@ -1,8 +1,16 @@
+::selection {
+  background: var(--dot-color);
+}
+
 a {
   color: var(--highlight-color);
   text-decoration: none;
+  padding: 5px 10px 5px 10px;
   &:hover {
     text-decoration: underline;
+    background-color: var(--highlight-color);
+    color: var(--base-color);
+    padding: 5px 10px 5px 10px;
   }
 }
 
@@ -41,7 +49,7 @@ ul {
     margin-bottom: 20px;
   }
   h1 {
-    font-size: 40px;
+    font-size: 42px;
     line-height: 1.6;
     font-weight: bold;
     margin-top: 30px;
@@ -51,7 +59,7 @@ ul {
     }
   }
   h2 {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.4;
     font-weight: bold;
     margin-top: 30px;
@@ -104,6 +112,9 @@ ul {
   a {
     text-decoration: underline;
     &:hover {
+      background: none;
+      color: var(--text-color);
+      font-weight: bold;
     }
   }
   blockquote {
