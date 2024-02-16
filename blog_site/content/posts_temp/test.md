@@ -1,7 +1,7 @@
 ---
-title: "Test"
-date: 2023-MM-DD
-descripton: "Test"
+title: "ARTICLE FORMAT REFERENCE"
+date: YYYY-MM-DD
+descripton: "This article serves as a reference for format"
 tags:
     - others
 ---

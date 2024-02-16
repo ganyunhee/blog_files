@@ -90,9 +90,6 @@ source: https://github.com/ganyunhee/ai_webdev/tree/main/python/0801_pandas
 
 <br>
 
----
-`<WORKING...추후 업데이트할 예정!>`
----
 
 
 <br><br><br><br>
