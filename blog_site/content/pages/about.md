@@ -26,7 +26,7 @@ image: images/sample.jpg
 `multidisciplinary`의 정의                      					( 유의어 : `**다능력`** `**다학제`** )
 ----------------------------
 
-	combining or involving several academic disciplines or professional specializations 
+	combining or involving several academic disciplines or professional specializations
 	in an approach to a topic or problem.
 ```
 <br>
