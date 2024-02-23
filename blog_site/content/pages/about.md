@@ -52,8 +52,8 @@ image: images/sample.jpg
 > - **Honest & Meticulous --- "정직하고 부지런한 언행"** <br><br>
 	저의 가치관이나 신념을 굳건하게 지키며 저의 의견을 명확히 표현하고 성실있게 행동합니다.
 	<br><br>
-> - **Remarkable Observational Learner --- "뛰어난 관찰학습 능력"** <br><br>
-	눈으로 보면서 쉽게 배우고 행동을 맞출 수 있는 관찰력을 가지고 있습니다.
+> - **Quick Learner --- "뛰어난 흡수력"** <br><br>
+	눈으로 주변을 관찰하여 쉽게 배우고 행동을 맞출 수 있는 강력한 관찰력을 갖추고 있습니다.
 > <br>
 ## <span style="font-size: 100%; background: #242424; color: #F6F5F0; padding-left: 0.75rem; padding-right: 0.75rem;">"THE BAD"</span>
 > -  **Perfectionist --- "만사에 완벽을 추구하는 성향"** <br><br>
