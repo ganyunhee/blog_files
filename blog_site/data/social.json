@@ -1,9 +1,14 @@
 {
-    "links": [
-      {
-        "name": "github",
-        "url": "https://github.com/ganyunhee/",
-        "image": "images/social/github.svg"
-      }
-    ]
-  }
+  "links": [
+    {
+      "name": "github",
+      "url": "https://github.com/ganyunhee/",
+      "image": "images/social/github.svg"
+    },
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/eunice-gan/",
+      "image": "images/social/linkedin.svg"
+    }
+  ]
+}

@@ -4,11 +4,11 @@ image: images/sample.jpg
 ---
 
 <div align="center">
-	<h2> 하고 싶은 것, 배우고 싶은 것이 많고,</h2>
-	<h2> Web (Full Stack) & Software Development과 </h2>
- 	<h2> Graphic Design, Artificial Intelligence에 관심이 있는 </h2>
-	<h2> Sogang University 'Computer Science & Engineering' 출신 국제학생 </h2>
-	<h2><span style="font-size: 275%; background: #242424; color: #F6F5F0; padding-left: 1.5rem; padding-right: 1.5rem;">Eunice Gan</span></h2>
+	<h1> 하고 싶은 것, 배우고 싶은 것이 많고,</h1>
+	<h1> Web (Full Stack) & Software Development과 </h1>
+ 	<h1> Graphic Design, Artificial Intelligence에 관심이 있는 </h1>
+	<h1> Sogang University 'Computer Science & Engineering' 출신 국제학생 </h1>
+	<h1><span style="font-size: 275%; background: #242424; color: #F6F5F0; padding-left: 1.5rem; padding-right: 1.5rem;">Eunice Gan</span></h1>
 </div>
 
 <br>
@@ -52,8 +52,8 @@ image: images/sample.jpg
 > - **Honest & Meticulous --- "정직하고 부지런한 언행"** <br><br>
 	저의 가치관이나 신념을 굳건하게 지키며 저의 의견을 명확히 표현하고 성실있게 행동합니다.
 	<br><br>
-> - **Remarkable Observational Learner --- "뛰어난 관찰학습 능력"** <br><br>
-	눈으로 보면서 쉽게 배우고 행동을 맞출 수 있는 관찰력을 가지고 있습니다.
+> - **Quick Learner --- "뛰어난 흡수력"** <br><br>
+	눈으로 주변을 관찰하여 쉽게 배우고 행동을 맞출 수 있는 강력한 관찰력을 갖추고 있습니다.
 > <br>
 ## <span style="font-size: 100%; background: #242424; color: #F6F5F0; padding-left: 0.75rem; padding-right: 0.75rem;">"THE BAD"</span>
 > -  **Perfectionist --- "만사에 완벽을 추구하는 성향"** <br><br>
@@ -71,7 +71,7 @@ image: images/sample.jpg
 
 > - **Favorite Color** : Turquoise
 > - **Anime** : Demon Slayer (귀멸의칼날). Jujutsu Kaisen (주술회전). Sword Art Online
-> - **Games** : Genshin Impact (원신). Assassin’s Creed. The Witcher Series. CyberPunk 2077
+> - **Games** : Genshin Impact (원신). Assassin’s Creed. The Uncharted. The Witcher. CyberPunk 2077
 > - **Music** : R&B. Hip Hop. Phonk
 
 <aside>
@@ -113,6 +113,11 @@ image: images/sample.jpg
 
 </aside>
 
+<aside>
+💡 UnArshia - <a href="https://www.instagram.com/unarshia/">https://www.instagram.com/unarshia/</a>
+
+</aside>
+
 <br><br>
 
 # PORTFOLIO & BLOG
@@ -124,6 +129,11 @@ image: images/sample.jpg
 
 <aside>
 💡 Blog : <a href="https://ganyunhee.github.io">https://ganyunhee.github.io</a>
+
+</aside>
+
+<aside>
+💡 LinkedIn : <a href="https://www.linkedin.com/in/eunice-gan/">https://linkedin.com/in/eunice-gan/</a>
 
 </aside>
 
