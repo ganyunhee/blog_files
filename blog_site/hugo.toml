@@ -31,7 +31,7 @@ pygmentsUseClasses = true
   textColor = "#1B2021"
   dotColor = "#A8A9AD"
   enableGoogleFonts = true 
-  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Fira+Mono&family=Inter&family=Inter+Tight&family=Bebas+Neue&display=swap"
+  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Fira+Mono&family=Inter&family=Inter+Tight&family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
   fontFamilyHeading = "Bebas Neue"
   fontFamilyParagraph = "'Inter Tight', 'Noto Sans KR Medium'"
   fontFamilyMonospace = "'Fira Mono', 'Noto Sans KR'"

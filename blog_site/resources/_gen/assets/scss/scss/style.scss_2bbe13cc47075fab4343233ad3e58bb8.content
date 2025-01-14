@@ -135,7 +135,9 @@ ul {
     list-style: none; }
 
 .content {
-  font-size: 18px; }
+  font-size: 18px;
+  /*font size - tablets*/
+  /*font size - phone*/ }
   .content p {
     font-size: 18px;
     line-height: 1.6;
@@ -150,6 +152,28 @@ ul {
     margin-bottom: 20px; }
     .content h1:first-of-type {
       margin-top: 0; }
+  .content h1.about-name-header {
+    line-height: 1; }
+  .content h1.about-quote-header {
+    margin-top: -30px; }
+  .content h2.about-details-header {
+    line-height: 0.5; }
+    .content h2.about-details-header:first-of-type {
+      margin-top: 50px; }
+  .content h1 .about-name {
+    font-size: 500%; }
+  .content h2 .about-details {
+    font-size: 100%; }
+  @media (max-width: 768px) {
+    .content h1 .about-name {
+      font-size: 350%; }
+    .content h2 .about-details {
+      font-size: 70%; } }
+  @media (max-width: 480px) {
+    .content h1 .about-name {
+      font-size: 200%; }
+    .content h2 .about-details {
+      font-size: 0.80rem; } }
   .content h2 {
     font-size: 32px;
     line-height: 1.4;

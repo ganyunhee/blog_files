@@ -3,5 +3,8 @@ title: Slowly getting somewhere
 description: "This is a sample introduction. Will be updated when I get my life together."
 ---
 
-**Hi, I'm Eunice**! I am a Filipino graduate of **Sogang University, South Korea** with a Bachelor's degree in **Computer Science and Engineering**. I aspire to become a **"Multidisciplinary Developer and/or Designer"** adept in <u>Full Stack Web Development</u>, <u>Software & AI</u>, as well as <u>UI/UX & Motion Graphics Design</u>. This is a personal blog I created for life, learning, and programming documentation.
-Feel free to explore!
+**Hi, I'm Eunice!** -- 
+a Filipino **Computer Science and Engineering** graduate from **Sogang University (Seoul, South Korea)**.
+I am currently a **< UEFI/BIOS Firmware Engineer />** with nearly a year of hands-on experience.
+I aspire to develop a **"multidisciplinary"** skill set, blending expertise in <u>firmware</u>, <u>software</u>, <u>AI</u>, and <u>web development</u>.
+This blog documents my journey through *life*, *learning*, and *programming*.
