@@ -84,14 +84,47 @@ ul {
     h2 .about-details {
       font-size: 70%;
     }
+    h1.about-quote-header {
+      line-height: 2;
+    }
+    h2.about-details-header {
+      line-height: 0;
+    }
   }
   /*font size - phone*/
   @media (max-width: 480px) {
     h1 .about-name {
       font-size: 200%;
+      margin-bottom: 20px;
     }
     h2 .about-details {
-      font-size: 0.80rem;
+      font-size: 0.7rem;
+    }
+    h1.about-quote-header {
+      line-height: 2;
+      font-size: 1.2rem;
+    }
+    h2.about-details-header {
+      margin-top: 0px;
+      margin-bottom: 10px;
+      &:first-of-type {
+        margin-top: 0px;
+      }
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  /*font size - thin phones*/
+  @media (max-width: 376px) {
+    h1 .about-name {
+      font-size: 170%;
+    }
+    h2.about-details-header {
+      line-height: 0;
+    }
+    h2 .about-details {
+      font-size: 0.65rem;
     }
   }
   h2 {

@@ -137,7 +137,8 @@ ul {
 .content {
   font-size: 18px;
   /*font size - tablets*/
-  /*font size - phone*/ }
+  /*font size - phone*/
+  /*font size - thin phones*/ }
   .content p {
     font-size: 18px;
     line-height: 1.6;
@@ -168,12 +169,34 @@ ul {
     .content h1 .about-name {
       font-size: 350%; }
     .content h2 .about-details {
-      font-size: 70%; } }
+      font-size: 70%; }
+    .content h1.about-quote-header {
+      line-height: 2; }
+    .content h2.about-details-header {
+      line-height: 0; } }
   @media (max-width: 480px) {
     .content h1 .about-name {
-      font-size: 200%; }
+      font-size: 200%;
+      margin-bottom: 20px; }
     .content h2 .about-details {
-      font-size: 0.80rem; } }
+      font-size: 0.7rem; }
+    .content h1.about-quote-header {
+      line-height: 2;
+      font-size: 1.2rem; }
+    .content h2.about-details-header {
+      margin-top: 0px;
+      margin-bottom: 10px; }
+      .content h2.about-details-header:first-of-type {
+        margin-top: 0px; }
+      .content h2.about-details-header:last-of-type {
+        margin-bottom: 0px; } }
+  @media (max-width: 376px) {
+    .content h1 .about-name {
+      font-size: 170%; }
+    .content h2.about-details-header {
+      line-height: 0; }
+    .content h2 .about-details {
+      font-size: 0.65rem; } }
   .content h2 {
     font-size: 32px;
     line-height: 1.4;
